@@ -8,83 +8,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SQL</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-
-    }
-
-    .title {
-      text-align: center;
-      margin: 50px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: #333;
-    }
-
-    .form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    form {
-      background-color: #fff;
-      padding-left: 20px;
-      padding-right: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 400px;
-    }
-
-    p {
-      margin-bottom: 15px;
-    }
-
-    label {
-      display: block;
-      font-size: 1rem;
-      margin-bottom: 5px;
-      color: #333;
-    }
-
-    input[type="text"] {
-      width: 100%;
-      padding: 8px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    input[type="submit"] {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      justify-content: center;
-      width: 300px;
-      transition: background-color 0.3s;
-      
-    }
-
-    input[type="submit"]:hover {
-      background-color: #0056b3;
-      
-    }
-
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div class="title">
     <h1>STUDENT MANAGEMENT SYSTEM</h1>
   </div>
+
   <div class="form">
     <form action="core/handleForms.php" method="POST">
       <!-- using required to make sure it don't leave null answer -->
@@ -122,11 +53,11 @@
     </form>
   </div>
   
-  <div style="text-align: center; margin-top: 50px;">
+  <div class="testGlobal" style="text-align: center; margin-top: 50px;">
     <a href="testGetVariable.php?studentLastName=Diaz&studentAge=22">Test Get SuperGlobal</a>
   </div>
 
-  <div style="padding: 50px;">
+  <div class="table" style="padding: 50px;">
   <?php $showStudentRecords = showStudentRecords($pdo);?>
   <?php if ($showStudentRecords) : ?>
     <table border="1" style="margin: 0 auto; text-align: center; width: 50%">
